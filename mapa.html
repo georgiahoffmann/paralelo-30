@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paralelo 30 · Mapa do circuito</title>
+<meta name="description" content="Paralelo 30: festival cultural gratuito de 3 dias no Parque da Redenção, Porto Alegre, 01 a 03 de outubro de 2027.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-in">
+<a class="logo" href="index.html" aria-label="Paralelo 30, página inicial"><img src="assets/logo-dark.svg" alt="Paralelo 30"></a>
+<nav aria-label="Principal"><a class="tab rt" href="index.html">Home</a><a class="tab rt on" href="mapa.html" aria-current="page">Mapa</a><a class="tab rt" href="passaporte.html">Passaporte</a><a class="btn dark rt" href="passaporte.html#inscricao">Inscreva-se</a></nav>
+</div></header>
+<main>
+<section class="mapa-hero">
+<div class="tt"><h1 class="rt vtext">Mapa do circuito</h1></div>
+<div class="mid">
+<div class="map">
+<img src="assets/mapa.svg" alt="Mapa ilustrado do centro de Porto Alegre, com o Parque da Redenção em verde">
+<div class="pin rt">Festival · Redenção</div>
+<div id="zones"></div>
+</div>
+<div class="bar-y"><p class="rt">32 pontos e 4 bairros</p><div class="chips" id="bairros" role="group" aria-label="Filtrar por bairro"></div></div>
+<div class="bar-d"><p>Mapa ilustrativo: as áreas mostram onde ficam os bairros, não o endereço exato de cada ponto. Confira os horários de funcionamento de cada estabelecimento antes de ir.</p></div>
+</div>
+<div class="vstrip"><span class="rt vtext">Mostre o passaporte, ganhe o benefício, leve o carimbo</span></div>
+</section>
+<section class="list" id="pontos">
+<div class="list-h"><div class="l"><p class="eyebrow">01 — Pontos do circuito</p><h2 class="rt h-xl" id="titulo">Todos os bairros</h2></div><p class="cnt rt" id="total" aria-live="polite">32 pontos</p></div>
+<div class="list-b">
+<div class="filters">
+<label for="busca" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Buscar ponto</label>
+<input id="busca" type="search" placeholder="Buscar por nome, tipo ou benefício" autocomplete="off">
+<div class="cat-group" id="cats" role="group" aria-label="Filtrar por tipo"></div>
+<button class="clear" id="limpar" type="button" hidden>Limpar filtros</button>
+</div>
+<p class="empty rt" id="vazio" hidden>Nenhum ponto com esses filtros.</p>
+<div id="lista"></div>
+<p class="note">Benefícios com bebida alcoólica valem apenas para maiores de 18 anos.</p>
+</div>
+</section>
+<section class="trilhas-h"><p class="eyebrow">02 — Trilhas sugeridas</p><h2 class="rt h-xl">Quatro roteiros a pé</h2><p class="lead">Para ir de parada em parada a partir do parque. Siga a ordem ou monte o seu caminho.</p></section>
+<section class="trilhas"><article class="trilha" style="background:#B0D5F7"><p class="let rt">A</p><h3 class="rt">Bom Fim</h3><ol><li>Mais Art</li><li>Quati</li><li>Uai Why</li><li>Brasco e Bancaberta (quase no mesmo ponto)</li><li>Pastel com Borda</li><li>Alameda Bom Fim</li><li>Casa de Pelotas</li><li>Vintage Lab</li><li>Brechó Rheaps</li><li>Brique da Redenção</li></ol></article><article class="trilha" style="background:#FFEE62"><p class="let rt">B</p><h3 class="rt">Cidade Baixa</h3><ol><li>Koralle</li><li>Spoiler Bar</li><li>Bamboletras</li><li>Fruto Coletivo</li><li>Janela</li><li>Povoada Gastro Bar</li><li>Barril Dobrado</li><li>Sorveteria Joia</li><li>Agridoce Café</li><li>Copão</li><li>Macunaíma Gastro Bar</li><li>Livraria Via Sapiens</li><li>Volta ao parque</li></ol></article><article class="trilha" style="background:#96D26F"><p class="let rt">C</p><h3 class="rt">Centro</h3><ol><li>Livraria Taverna</li><li>Vinil Social Clube</li><li>Casa Jambu</li><li>Vão Arte e Drinks</li></ol></article><article class="trilha" style="background:#FF6A2B"><p class="let rt">D</p><h3 class="rt">Rio Branco</h3><ol><li>Bar Metz</li><li>Pito</li></ol></article></section>
+<section class="cta"><h2 class="rt">Ainda sem passaporte?</h2><a class="btn yellow rt" href="passaporte.html#inscricao">Inscreva-se</a></section>
+</main>
+<footer class="foot">
+<div class="foot-top">
+<p class="about">Festival gratuito de 3 dias no Parque da Redenção, com artistas locais, oficinas criativas e um circuito pelos comércios do centro de Porto Alegre.</p>
+<div class="col"><p class="eyebrow">Navegue</p><a href="index.html">Home</a><a href="mapa.html">Mapa do circuito</a><a href="passaporte.html">Passaporte Cultural</a></div>
+<div class="col"><p class="eyebrow">Quando e onde</p><p>01 a 03 de outubro de 2027<br>Parque da Redenção, Porto Alegre<br>Entrada gratuita</p></div>
+</div>
+<div class="foot-logo"><img src="assets/logo-dark.svg" alt="Paralelo 30"></div>
+<div class="foot-bot"><p class="eyebrow">Paralelo 30 · coletivo produtor de eventos culturais independente · Porto Alegre, RS</p></div>
+</footer>
+<script>window.PLACES=[{"k": "Bom Fim", "n": "Vintage Lab", "t": "Brechó", "b": "10% na compra ou ecobag de brinde"}, {"k": "Bom Fim", "n": "Quati", "t": "Gelateria artesanal", "b": "10% no consumo"}, {"k": "Bom Fim", "n": "Casa de Pelotas", "t": "Doceria e cafeteria", "b": "Doce ou café de brinde"}, {"k": "Bom Fim", "n": "Alameda Bom Fim", "t": "Galeria gastronômica", "b": "10% no consumo em qualquer estabelecimento"}, {"k": "Bom Fim", "n": "Pastel com Borda", "t": "Pastelaria", "b": "Mini pastel ou 10%"}, {"k": "Bom Fim", "n": "Brasco", "t": "Mercado, café e bar", "b": "10% no consumo no café ou no bar"}, {"k": "Bom Fim", "n": "Bancaberta", "t": "Banca de zines, gravuras e livros", "b": "Zine ou adesivo de brinde"}, {"k": "Bom Fim", "n": "Livraria Clareira", "t": "Livraria com café", "b": "Café ou 10% em livros"}, {"k": "Bom Fim", "n": "Uai Why", "t": "Cafeteria com pão de queijo e café gelado", "b": "Pão de queijo de brinde"}, {"k": "Bom Fim", "n": "Brechó Rheaps", "t": "Brechó de streetwear", "b": "10% em uma peça"}, {"k": "Bom Fim", "n": "Mais Art", "t": "Moda upcycling", "b": "10% ou brinde (ecobag, adesivo)"}, {"k": "Bom Fim", "n": "Lancheria do Parque", "t": "Restaurante clássico tradicional", "b": "10% no consumo ou sobremesa"}, {"k": "Cidade Baixa", "n": "Koralle", "t": "Materiais de arte e papelaria", "b": "Caderno ou adesivo de brinde"}, {"k": "Cidade Baixa", "n": "Janela", "t": "Bar de coquetéis", "b": "10% no consumo ou drink cortesia"}, {"k": "Cidade Baixa", "n": "Fruto Coletivo", "t": "Bar, restaurante e música ao vivo", "b": "1 drink Fruto Proibido ou 10% no consumo no bar"}, {"k": "Cidade Baixa", "n": "Spoiler Bar", "t": "Bar de coquetéis", "b": "10% no consumo ou drink cortesia"}, {"k": "Cidade Baixa", "n": "Sorveteria Joia", "t": "Sorveteria", "b": "10% no consumo ou 1 bola de sorvete de cortesia"}, {"k": "Cidade Baixa", "n": "Bamboletras", "t": "Livraria independente", "b": "10% em livros ou marcador de brinde"}, {"k": "Cidade Baixa", "n": "Livraria Via Sapiens", "t": "Livraria e editora", "b": "10% em livros ou marcador de brinde"}, {"k": "Cidade Baixa", "n": "Macunaíma Gastro Bar", "t": "Bar e galeria", "b": "Petisco ou dose de cortesia"}, {"k": "Cidade Baixa", "n": "Barril Dobrado (espaço Artys)", "t": "Bar com cervejas locais e comida baiana", "b": "Copo pequeno ou 10%"}, {"k": "Cidade Baixa", "n": "Copão Bar e Restaurante", "t": "Bar e restaurante com mais de 40 anos", "b": "Petisco ou 5% no consumo"}, {"k": "Cidade Baixa", "n": "Agridoce Café", "t": "Café e brunch", "b": "Doce ou café de brinde"}, {"k": "Cidade Baixa", "n": "Povoada Gastro Bar", "t": "Bar de coquetéis", "b": "10% no consumo ou drink cortesia"}, {"k": "Cidade Baixa", "n": "Tudo pelo Social", "t": "Restaurante clássico tradicional", "b": "10% no consumo ou sobremesa"}, {"k": "Rio Branco", "n": "Bar Metz", "t": "Bar de coquetéis", "b": "1 copo de Matito ou 5% no consumo"}, {"k": "Rio Branco", "n": "Pito", "t": "Bar de coquetéis", "b": "10% no consumo"}, {"k": "Centro Histórico", "n": "Livraria Taverna", "t": "Livraria e editora independente", "b": "10% em livros ou marcador de brinde"}, {"k": "Centro Histórico", "n": "Brita Bar", "t": "Bar de coquetéis", "b": "10% no consumo"}, {"k": "Centro Histórico", "n": "Vinil Social Clube", "t": "Loja de discos", "b": "10% no consumo"}, {"k": "Centro Histórico", "n": "Casa Jambu", "t": "Loja colaborativa com 30 artistas", "b": "10% em uma peça ou adesivo de brinde"}, {"k": "Centro Histórico", "n": "Vão Arte e Drinks", "t": "Loja colaborativa com artistas e bar", "b": "Petisco ou 10% em artes"}];</script>
+<script src="app.js"></script>
+</body>
+</html>
