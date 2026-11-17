@@ -255,3 +255,8 @@ article>p,.step .no,.pop,.stat .big{animation:pop linear both;animation-timeline
 .s01 .txt{margin-left:0}
 .st{opacity:.3}
 }
+@media (max-width:800px){
+.hero-l{flex-basis:auto;gap:32px;padding:32px 20px 40px}
+.hero-l .logo-hero{max-width:100%}
+.hero-r{min-height:420px}
+}
