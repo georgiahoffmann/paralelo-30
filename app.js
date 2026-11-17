@@ -31,7 +31,7 @@
       var shown = byZone.filter(function (p) { return st.c === 'Todos' || p.cat === st.c; });
 
       $('zones').innerHTML = zones.map(function (z) {
-        return '<button type="button" class="zone" data-z="' + z.k + '" aria-pressed="' + (st.f === z.k) + '" style="left:' + z.x + '%;top:' + z.y + '%">' + z.k + ' · ' + counts[z.k] + '</button>';
+        return '<button type="button" class="zone" data-z="' + z.k + '" aria-pressed="' + (st.f === z.k) + '" aria-label="' + z.k + ', ' + counts[z.k] + ' pontos" style="left:' + z.x + '%;top:' + z.y + '%"><span class="zf">' + z.k + '</span><span class="zs">' + (z.k === 'Centro Histórico' ? 'Centro' : z.k) + '</span> · ' + counts[z.k] + '</button>';
       }).join('');
       $('bairros').innerHTML = bairros.map(function (n) {
         return '<button type="button" data-b="' + n + '" aria-pressed="' + (st.f === n) + '">' + (st.f === n ? '● ' : '○ ') + n + '</button>';
@@ -60,6 +60,22 @@
     });
     $('busca').addEventListener('input', function (e) { st.q = e.target.value; render(); });
     render();
+  }
+
+  // ---------- Menu mobile ----------
+  var top = document.querySelector('.top'), mb = document.querySelector('.menu-btn');
+  if (top && mb) {
+    var setMenu = function (open) {
+      top.classList.toggle('open', open);
+      mb.setAttribute('aria-expanded', open);
+      mb.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    };
+    mb.addEventListener('click', function () { setMenu(!top.classList.contains('open')); });
+    top.querySelectorAll('nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && top.classList.contains('open')) { setMenu(false); mb.focus(); }
+    });
+    window.matchMedia('(min-width:641px)').addEventListener('change', function (e) { if (e.matches) setMenu(false); });
   }
 
   // ---------- Passaporte: formulário ----------
